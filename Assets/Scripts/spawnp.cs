@@ -24,12 +24,12 @@ public class spawnp : MonoBehaviour
             print("collision stay");
             float[] spisok = {-1.7f,0,0,1.7f};
             Instantiate(platform, new Vector3(0.0f, -0.5f, transform.position.z + zSpawnPrefabDistaince), Quaternion.identity);
-            Instantiate(coin, new Vector3(0.0f, 0.0f, transform.position.z + zSpawnPrep+3), Quaternion.Euler(90,0,0));
-            Instantiate(coin, new Vector3(0.0f, 0.0f, transform.position.z + zSpawnPrep + 6), Quaternion.Euler(90,0,0));
+            Instantiate(coin, new Vector3(0.0f, 0.0f, transform.position.z + zSpawnPrep+5), Quaternion.Euler(90,0,0));
+            Instantiate(coin, new Vector3(0.0f, 0.0f, transform.position.z + zSpawnPrep + 8), Quaternion.Euler(90,0,0));
             Instantiate(prepyts, new Vector3( spisok[Random.Range(0,4)]  , 0.0f, transform.position.z + zSpawnPrep), Quaternion.identity);
 
-            Instantiate(coin, new Vector3(0.0f, 0.0f, transform.position.z + zSpawnPrep+18), Quaternion.Euler(90,0,0));
-            Instantiate(coin, new Vector3(0.0f, 0.0f, transform.position.z + zSpawnPrep + 21), Quaternion.Euler(90,0,0));
+            Instantiate(coin, new Vector3(0.0f, 0.0f, transform.position.z + zSpawnPrep+20), Quaternion.Euler(90,0,0));
+            Instantiate(coin, new Vector3(0.0f, 0.0f, transform.position.z + zSpawnPrep + 23), Quaternion.Euler(90,0,0));
             Instantiate(prepyts, new Vector3( spisok[Random.Range(0,4)]  , 0.0f, transform.position.z + zSpawnPrep+15), Quaternion.identity);
         }
     }

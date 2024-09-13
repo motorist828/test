@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.78, y: 0.92530537, z: 1}
-  m_LocalScale: {x: 2.2, y: 1, z: 1}
+  m_LocalScale: {x: 2.4, y: 1, z: 0.38619}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3813209188590282293}
@@ -120,6 +120,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SliderThing: {fileID: 0}
+  restext: {fileID: 0}
+  result: {fileID: 0}
   cube: {fileID: 8842057130146338148}
   cam: {fileID: 0}
   test: {fileID: 0}
@@ -144,11 +146,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 401996, guid: 60c3ddc2e66359b479f2a7d7c20faa1a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.76
+      value: 0.78318006
+      objectReference: {fileID: 0}
+    - target: {fileID: 401996, guid: 60c3ddc2e66359b479f2a7d7c20faa1a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.2042
       objectReference: {fileID: 0}
     - target: {fileID: 401996, guid: 60c3ddc2e66359b479f2a7d7c20faa1a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.000000027093
       objectReference: {fileID: 0}
     - target: {fileID: 401996, guid: 60c3ddc2e66359b479f2a7d7c20faa1a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -156,7 +162,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 401996, guid: 60c3ddc2e66359b479f2a7d7c20faa1a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.0015284
       objectReference: {fileID: 0}
     - target: {fileID: 401996, guid: 60c3ddc2e66359b479f2a7d7c20faa1a, type: 3}
       propertyPath: m_LocalRotation.w

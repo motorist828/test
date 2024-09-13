@@ -41,15 +41,7 @@ public class NewBehaviourScript : MonoBehaviour
         SliderThing.value = hp;
         Cursor.visible = false;
         AudioManager.instance.Play("music");
-        
-        
- 
-
-        
-        
-
-        
-        
+          
     }
  
 
@@ -111,7 +103,7 @@ public class NewBehaviourScript : MonoBehaviour
  }
 
      private void OnTriggerEnter(Collider other) {
-        if(other.gameObject.tag == "coin"){
+        if(other.gameObject.tag == "coin" & hp>0){
 
             coinval++;
             Destroy(other.gameObject);
