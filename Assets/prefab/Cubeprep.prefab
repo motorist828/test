@@ -121,6 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SliderThing: {fileID: 0}
   restext: {fileID: 0}
+  record: {fileID: 0}
   result: {fileID: 0}
   cube: {fileID: 8842057130146338148}
   cam: {fileID: 0}
@@ -129,6 +130,7 @@ MonoBehaviour:
   cointext: {fileID: 0}
   coinval: 0
   hp: 100
+  intToSave: 0
   prep2: []
   spead: 5
   x: 0

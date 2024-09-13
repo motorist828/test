@@ -359,6 +359,7 @@
 "Assets/Scripts/clearobj.cs"
 "Assets/Scripts/NewBehaviourScript.cs"
 "Assets/Scripts/pausemenu.cs"
+"Assets/Scripts/policlight.cs"
 "Assets/Scripts/poscam.cs"
 "Assets/Scripts/rotatecoin.cs"
 "Assets/Scripts/Sound.cs"

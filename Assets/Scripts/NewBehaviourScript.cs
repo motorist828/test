@@ -16,6 +16,7 @@ public class NewBehaviourScript : MonoBehaviour
 
     public Text restext;
 
+    public Text record;
     public GameObject result;
     public GameObject cube;
     public GameObject cam ;
@@ -29,6 +30,8 @@ public class NewBehaviourScript : MonoBehaviour
 
     public int hp = 100;
 
+    public int intToSave = 0;
+
     
     public List<GameObject> prep2 = new List<GameObject>();
     private float xcam =0f;
@@ -41,7 +44,17 @@ public class NewBehaviourScript : MonoBehaviour
         SliderThing.value = hp;
         Cursor.visible = false;
         AudioManager.instance.Play("music");
-          
+
+
+        
+
+        if (PlayerPrefs.HasKey("SavedInteger"))
+        {
+            intToSave = PlayerPrefs.GetInt("SavedInteger");
+            Debug.Log("Game data loaded!");
+        }
+        else
+            Debug.LogError("There is no save data!");    
     }
  
 
@@ -54,18 +67,27 @@ public class NewBehaviourScript : MonoBehaviour
  {  
 
     float spead2 = spead + (float)Math.Sqrt(coinval);
+
+    //var angle = cube.transform.eulerAngles.y;
+    //angle = Mathf.Repeat(angle + 180, 360) - 180;
     
-    if(Input.GetKey (KeyCode.A)||Input.GetKey (KeyCode.LeftArrow))
+    if(Input.GetKey (KeyCode.A)||Input.GetKey (KeyCode.LeftArrow)){
     cube.GetComponent<Transform>().Translate(new Vector3(-1,0,0)* (2+spead2/2)* Time.deltaTime);
 
-        if(Input.GetKey(KeyCode.D)||Input.GetKey (KeyCode.RightArrow))
+    
+    }
+    if(Input.GetKey(KeyCode.D)||Input.GetKey (KeyCode.RightArrow)){
     cube.GetComponent<Transform>().Translate(new Vector3(1,0,0)* (2+spead2/2)* Time.deltaTime);
+
+    } 
+
+
+
+
+    //Debug.Log(angle);
+
     x = transform.position[0];
-
-
-
     xcam = cam.transform.position[0];
-
 
     
     if (x < (xcam -0.2))
@@ -92,6 +114,15 @@ public class NewBehaviourScript : MonoBehaviour
         restext.text = "Было собрано: " + coinval;
         Time.timeScale = 0.1f;
         Cursor.visible = true;
+
+        if(coinval>intToSave)
+        {
+        intToSave=coinval;
+        PlayerPrefs.SetInt("SavedInteger", intToSave);
+        PlayerPrefs.Save();
+        }
+        record.text = "Рекорд: " + intToSave;
+
         
         
         

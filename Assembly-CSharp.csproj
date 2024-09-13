@@ -76,6 +76,7 @@
     <Compile Include="Assets\menu\menupause.cs" />
     <Compile Include="Assets\Scripts\Sound.cs" />
     <Compile Include="Assets\menu\menu.cs" />
+    <Compile Include="Assets\Scripts\policlight.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
