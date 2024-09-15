@@ -31,6 +31,7 @@ public class NewBehaviourScript : MonoBehaviour
     public int hp = 100;
 
     public int intToSave = 0;
+    public int audioSave = 0;
 
     
     public List<GameObject> prep2 = new List<GameObject>();
@@ -43,18 +44,26 @@ public class NewBehaviourScript : MonoBehaviour
     {
         SliderThing.value = hp;
         Cursor.visible = false;
-        AudioManager.instance.Play("music");
+        //AudioManager.instance.Play("music");
 
-
-        
 
         if (PlayerPrefs.HasKey("SavedInteger"))
         {
             intToSave = PlayerPrefs.GetInt("SavedInteger");
+            audioSave = PlayerPrefs.GetInt("Savedaudio");
             Debug.Log("Game data loaded!");
         }
         else
-            Debug.LogError("There is no save data!");    
+            Debug.LogError("There is no save data!"); 
+
+        if (audioSave==0){}
+        else if(audioSave==1){
+            AudioManager.instance.Play("music");
+        }else if(audioSave==2){
+            AudioManager.instance.Play("music2");
+        }
+
+
     }
  
 
