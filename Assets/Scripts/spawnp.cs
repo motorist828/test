@@ -26,11 +26,11 @@ public class spawnp : MonoBehaviour
             Instantiate(platform, new Vector3(0.0f, -0.5f, transform.position.z + zSpawnPrefabDistaince), Quaternion.identity);
             Instantiate(coin, new Vector3(0.0f, 0.0f, transform.position.z + zSpawnPrep+5), Quaternion.Euler(90,0,0));
             Instantiate(coin, new Vector3(0.0f, 0.0f, transform.position.z + zSpawnPrep + 8), Quaternion.Euler(90,0,0));
-            Instantiate(prepyts, new Vector3( spisok[Random.Range(0,4)]  , 0.0f, transform.position.z + zSpawnPrep), Quaternion.identity);
+            Instantiate(prepyts, new Vector3( spisok[Random.Range(0,4)]  , -0.5f, transform.position.z + zSpawnPrep), Quaternion.identity);
 
             Instantiate(coin, new Vector3(0.0f, 0.0f, transform.position.z + zSpawnPrep+20), Quaternion.Euler(90,0,0));
             Instantiate(coin, new Vector3(0.0f, 0.0f, transform.position.z + zSpawnPrep + 23), Quaternion.Euler(90,0,0));
-            Instantiate(prepyts, new Vector3( spisok[Random.Range(0,4)]  , 0.0f, transform.position.z + zSpawnPrep+15), Quaternion.identity);
+            Instantiate(prepyts, new Vector3( spisok[Random.Range(0,4)]  , -0.5f, transform.position.z + zSpawnPrep+15), Quaternion.identity);
         }
     }
     private void OnCollisionExit(Collision collision)

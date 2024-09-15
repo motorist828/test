@@ -26,7 +26,7 @@ public class clearobj : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.tag == "barer" || other.gameObject.tag == "coin"){
-            Destroy(other.gameObject);
+            Destroy(other.gameObject,0.6f);
         }
         
 
